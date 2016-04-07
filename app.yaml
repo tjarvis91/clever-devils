@@ -1,7 +1,7 @@
-application: tabis-projects
+application: clever-devils
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: yes
 
 handlers:
 - url: /.*
