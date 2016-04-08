@@ -1,0 +1,5 @@
+<form>
+<h2>Clever Devil Games</h2>
+<input type="text" name="food">
+<button>Enter</button>
+</form>
