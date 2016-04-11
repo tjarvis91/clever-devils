@@ -3,6 +3,8 @@ import os
 import jinja2
 import webapp2
 
+from google.appengine.ext import db
+
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
 
@@ -17,17 +19,23 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
-class FizzBuzzHandler(Handler):
-    def get(self):
-        n = self.request.get('n', 0)
-        n = n and int(n)
-        self.render('fizzbuzz.html', n=n)
-
 class MainPage(Handler):
+    def render_front(self, title="", art="", error=""):
+		self.render("form.html", title=title, art=art, error=error)
+		
     def get(self):
-        items = self.request.get_all("food")
-        self.render("shopping_list.html", items=items)
+        self.render_front()
 
+    def post(self):
+        title = self.request.get("title")
+        art = self.request.get("art")
+		
+        if title and art:
+            self.write("Entry logged.")
+        else:
+            error = "Please enter a title and an ascii art."
+            self.render_front(title, art, error)
+
+			
 app = webapp2.WSGIApplication([('/', MainPage),
-                               ('/fizzbuzz', FizzBuzzHandler),
                                ], debug=True)
