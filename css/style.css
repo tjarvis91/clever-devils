@@ -3,14 +3,23 @@ body {
   font-weight: 300;
   color: maroon; }
 
+.title {
+  font-size: 75px;
+  font-weight: 300; }
+
 .menu-btn {
   background: #c0c0c0;
+  border: 5px solid;
   color: white;
   padding: 5px;
   font-size: 20px; }
 
 .dropdown-menu {
   color: black; }
+
+.dropdown-menu-item {
+  padding: 20px;
+  font-size: 16px; }
 
 .text-muted {
   color: #BCBBBB; }

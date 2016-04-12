@@ -2,7 +2,7 @@
 var main = function() {
   $('.menu-btn').click(function() {
     $('.menu-btn').children('.dropdown-menu').hide();
-    $(this).children('.dropdown-menu').show();
+    $(this).children('.dropdown-menu').slideDown(100);
   });
 };
 
