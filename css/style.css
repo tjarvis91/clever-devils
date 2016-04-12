@@ -3,6 +3,15 @@ body {
   font-weight: 300;
   color: maroon; }
 
+.menu-btn {
+  background: #c0c0c0;
+  color: white;
+  padding: 5px;
+  font-size: 20px; }
+
+.dropdown-menu {
+  color: black; }
+
 .text-muted {
   color: #BCBBBB; }
 

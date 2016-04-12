@@ -1,13 +1,24 @@
 body {
-    font-family: 'Times', serif;
-    font-weight: 300;
-    color: maroon;
+  font-family: 'Times', serif;
+  font-weight: 300;
+  color: maroon;
+}
+
+.menu-btn {
+  background: #c0c0c0;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  color: black;
 }
 
 .text-muted {
-    color: #BCBBBB;
+  color: #BCBBBB;
 }
 
 .text_thin {
-    font-weight: 100;
+  font-weight: 100;
 }
