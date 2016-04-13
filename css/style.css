@@ -4,8 +4,12 @@ body {
   color: maroon; }
 
 .title {
-  font-size: 75px;
-  font-weight: 300; }
+  font-size: 46px;
+  font-weight: 300;
+  background: maroon;
+  color: white;
+  text-align: center;
+  padding: 5px; }
 
 .menu-btn {
   background: #c0c0c0;
@@ -19,7 +23,8 @@ body {
 
 .dropdown-menu-item {
   padding: 20px;
-  font-size: 16px; }
+  font-size: 16px;
+  width: inherit; }
 
 .text-muted {
   color: #BCBBBB; }
