@@ -2,33 +2,34 @@ body {
   font-family: 'Times', serif;
   font-weight: 300;
   color: maroon;
+  padding-top: 50px;
 }
 
-.title {
-  font-size: 46px;
-  font-weight: 300;
-  background: maroon;
-  color: white;
-  text-align: center;
-  padding: 5px;
+#gamesCarousel {
+  margin-left: -20px;
+  margin-right: -20px;
+  min-width: 100%;
 }
 
 .menu-btn {
-  background: #c0c0c0;
-  border: 5px solid;
-  color: white;
-  padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
+  text-transform: lowercase;
+  text-align: right;
+  padding-left: 50px;
+}
+
+.navbar-brand {
+  font-size: 22px;
 }
 
 .dropdown-menu {
-  color: black;
+  background: #e0e0e0;
+  text-transform: none;
 }
 
 .dropdown-menu-item {
   padding: 20px;
   font-size: 16px;
-  width: inherit;
 }
 
 .text-muted {
