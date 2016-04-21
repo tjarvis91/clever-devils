@@ -9,6 +9,3 @@ global:
   default_region: us-west-2
   profile: eb-cli
   sc: git
-option_settings:
-  aws:elasticbeanstalk:container:python:
-    WSGIPath: app.py
