@@ -1,0 +1,14 @@
+branch-defaults:
+  master:
+    environment: dev-env
+    group_suffix: null
+global:
+  application_name: clever-devil-games
+  default_ec2_keyname: null
+  default_platform: Python 2.7
+  default_region: us-west-2
+  profile: eb-cli
+  sc: git
+option_settings:
+  aws:elasticbeanstalk:container:python:
+    WSGIPath: app.py
