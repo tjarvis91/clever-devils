@@ -28,7 +28,7 @@ def requires_auth(f):
         return f(*args, **kwargs)
     return decorated
 
-@app.route("/")
+@application.route("/")
 @requires_auth
 def index():
     return render_template('index.html')
