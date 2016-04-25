@@ -1,2 +1,7 @@
 *.pyc
 node_modules/*
+node_modules/body-parser/*
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
