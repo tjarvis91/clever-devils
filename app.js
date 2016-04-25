@@ -19,14 +19,18 @@ app.set("view options", { layout: false } );
 
 app.get('/', function(req, res) {
   res.render('index', {page: 'Home'});
+  console.log('Fetching Home page');
 });
 
 app.get('/about', function(req, res) {
-  res.sendFile( __dirname + '/templates/' + 'about.html');
+  res.render('about', {page: 'About'});
+  console.log('Fetching About page');
 })
 
 app.get('/contact', function(req, res) {
-  res.sendFile( __dirName + '/templates/' + 'contact.html');
+  res.render('contact', {page: 'Contact Us'});
+  console.log('Fetching Contact Us page');
+
 })
 var server = app.listen(port, function() {
   var host = server.address().address;
