@@ -22,16 +22,36 @@ app.get('/', function(req, res) {
   console.log('Fetching Home page');
 });
 
+app.get('/games', function(req, res) {
+  res.render('games', {page: 'Games'});
+  console.log('Fetching Games page');
+});
+
 app.get('/about', function(req, res) {
   res.render('about', {page: 'About'});
   console.log('Fetching About page');
-})
+});
 
 app.get('/contact', function(req, res) {
   res.render('contact', {page: 'Contact Us'});
   console.log('Fetching Contact Us page');
+});
 
-})
+app.get('/ninjas', function(req, res) {
+  res.render('ninjas', {page: 'Flippin\' Ninjas'});
+  console.log('Fetching Flippin\' Ninjas Game page');
+});
+
+app.get('/dragonhoard', function(req, res) {
+  res.render('dragonhoard', {page: 'Dragon Hoard'});
+  console.log('Fetching Dragon Hoard Game page');
+});
+
+app.get('/cardfight', function(req, res) {
+  res.render('cardfight', {page: 'Card Fight'});
+  console.log('Fetching Card Fight Game page');
+});
+
 var server = app.listen(port, function() {
   var host = server.address().address;
   var port = server.address().port;

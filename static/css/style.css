@@ -1,11 +1,13 @@
 body {
-  font-family: 'Times', serif;
-  padding-top: 50px; }
+  font-family: 'Voltaire', sans-serif;
+  padding-top: 50px;
+  background: #e0e0e0; }
 
 #gamesCarousel {
-  margin-left: -20px;
-  margin-right: -20px;
-  min-width: 100%; }
+  margin-left: -15px;
+  margin-right: -15px;
+  min-width: 100%;
+}
 
 .menu-btn {
   font-size: 16px;
@@ -13,19 +15,56 @@ body {
   text-align: right;
   padding-left: 50px; }
 
+.content {
+  background: white;
+  padding: 50px;
+}
+
+.footer {
+  background: black;
+}
+
 .navbar-brand {
   font-size: 22px; }
 
 .dropdown-menu {
   background: #e0e0e0;
-  text-transform: none; }
+ }
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-nav .caret {
+  display:none;
+ }
+}
 
 .dropdown-menu-item {
   padding: 20px;
   font-size: 16px; }
 
+.game {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.game a {
+  color: inherit;
+}
+
 .text-muted {
   color: #BCBBBB; }
 
-.text_thin {
-  font-weight: 100; }
+.pull-left {
+  text-align: left;
+  white-space: normal;
+}
+
+.pull-right {
+  text-align: right;
+  white-space: normal;
+}
