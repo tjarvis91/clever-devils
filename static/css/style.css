@@ -1,60 +1,69 @@
+/*******************************************************************************
+*  Tag Styles
+*******************************************************************************/
+
 body {
   font-family: 'Voltaire', sans-serif;
   padding-top: 50px;
   background: #e0e0e0;
 }
 
+/*******************************************************************************
+* ID (One-Time) Styles
+*******************************************************************************/
+
 #gamesCarousel {
   margin-left: -15px;
   margin-right: -15px;
-  min-width: 100%;
 }
+
+/*******************************************************************************
+* Class Styles
+*******************************************************************************/
+
+/* Menu *************************************/
 
 .menu-btn {
   font-size: 16px;
   text-transform: lowercase;
   text-align: right;
-  padding-left: 50px; }
-
-.content {
-  background: white;
-  padding: 50px;
+  padding-left: 50px;
 }
 
-.footer {
-  background: black;
+.navbar-logo {
+  padding: 20px;
 }
 
-.vert-line {
-  width: 1px;
-  background-color: #c0c0c0;
-  height: 100px;
-  float: left;
-  margin-right: 100px;
+.navbar-brand-text {
+  font-size: 30px;
 }
-
-.navbar-brand {
-  font-size: 22px; }
 
 .dropdown-menu {
   background: #e0e0e0;
  }
 
 @media (min-width: 768px) {
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
+ ul.nav li.dropdown:hover > ul.dropdown-menu {
+   display: block;
+ }
 }
 
 .dropdown-menu-item {
-  padding: 20px;
-  font-size: 16px; }
+ padding: 20px;
+ font-size: 16px;
+}
+
+/* Body *************************************/
+
+.content {
+  background: white;
+  padding: 50px;
+}
 
 .game {
   padding-top: 50px;
   padding-bottom: 50px;
   height: 500px;
-
 }
 
 .game-text-right {
@@ -63,11 +72,44 @@ body {
 
 .game-text-left {
   background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
+}
 
+/* Footer ***********************************/
+
+.footer {
+  background: black;
+  padding-bottom: 15px;
+}
+
+/* General **********************************/
+
+.banner-text {
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0));
+  background: -webkit-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Safari */
+  background: -o-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Firefox 3.6 to 15 */
+  background: radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Standard syntax */
+}
+
+.horiz-line {
+  background-color: #eeeeee;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: inherit;
+  height: 1px;
+}
+
+.vert-line {
+  background-color: #eeeeee;
+  width: 1px;
+  height: 100px;
+  float: left;
+  margin-right: 100px;
 }
 
 .text-muted {
-  color: #BCBBBB; }
+  color: #BCBBBB;
+}
 
 .pull-left {
   text-align: left;
@@ -79,10 +121,16 @@ body {
   white-space: normal;
 }
 
-.carousel-text {
-  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0));
-  background: -webkit-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Safari */
-  background: -o-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Firefox 3.6 to 15 */
-  background: radial-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75) 15%, rgba(0,0,0,.75) 75%, rgba(0,0,0,0)); /* Standard syntax */
+/* Game Pages *******************************/
+
+.game-banner {
+  background: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0,0,0,0.25)), to(rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(left, color-stop(rgba(0,0,0,0.25) 0), color-stop(rgba(0,0,0,0) 100%));
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.25) 0, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(0,0,0,0.25) 0, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, rgba(0,0,0,0.25) 100%);
+  height:487px;
+}
+
+.game-banner-image {
+  background-size: cover;
 }
