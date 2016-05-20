@@ -9,6 +9,16 @@ var basic = auth.basic({
 var app = express();
 var fs = require('fs');
 var ejs = require('ejs');
+var mysql = require('mysql');
+var news_db = mysql.createConnection({
+  host      : 'news-db.csfs8mh7tkth.us-west-2.rds.amazonaws.com',
+  user      : process.env.RDS_USERNAME,
+  password  : process.env.RDS_PASSWORD,
+  port      : '3306'
+})
+
+news_db.connect();
+console.log('Establishing connection to News Database');
 
 app.use(express.static('static'));
 app.use(auth.connect(basic));
@@ -25,6 +35,11 @@ app.get('/', function(req, res) {
 app.get('/games', function(req, res) {
   res.render('games', {page: 'Games'});
   console.log('Fetching Games page');
+});
+
+app.get('/news', function(req, res) {
+  res.render('news', {page: 'News'});
+  console.log('Fetching News page');
 });
 
 app.get('/about', function(req, res) {
@@ -58,3 +73,6 @@ var server = app.listen(port, function() {
 });
 
 console.log('Running on port ' + port);
+
+news_db.end();
+console.log('Ending News Database connection');

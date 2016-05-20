@@ -95,7 +95,7 @@ body {
   background-color: #eeeeee;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: inherit;
+  width: inherit - margin-top - margin-bottom;
   height: 1px;
 }
 
